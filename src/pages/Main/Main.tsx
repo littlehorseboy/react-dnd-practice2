@@ -20,6 +20,8 @@ export default function Main(): JSX.Element {
   const [cards, setCards] = useState([
     { id: 1, name: 'issue 1', status: 'todo' },
     { id: 2, name: 'issue 2', status: 'test' },
+    { id: 3, name: 'issue 3', status: 'develop' },
+    { id: 4, name: 'issue 4', status: 'develop' },
   ]);
 
   const updateCardStatus = (cardId: number, targetStatus: string): void => {
@@ -49,7 +51,7 @@ export default function Main(): JSX.Element {
                     key={card.id}
                     id={card.id}
                     name={card.name}
-                    // status={card.status}
+                    status={card.status}
                   />
                 ))}
             </CardWall>
